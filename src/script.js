@@ -75,6 +75,10 @@ function submiter() {
     // Finn den riktige vektklassen basert på kalkulert informasjon
     var weightLimit = groups[gender][ageGroup][weightIndex];
 
-    // Vis resultat i resultat p elementet
-    resultElement.textContent = "Du hører til aldersgruppen " + ageGroup + " med en vektklasse på " + weightLimit + "KG.";
+    resultElement.classList.remove('show-result');
+
+    setTimeout(function() {
+        resultElement.textContent = "Du hører til aldersgruppen " + ageGroup + " med en vektklasse på " + weightLimit + "KG.";
+        resultElement.classList.add('show-result');
+    }, 50);
 }
