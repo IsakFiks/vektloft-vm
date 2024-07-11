@@ -17,6 +17,7 @@ body {
 
 .logo-container {
     margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .logo-container img {
@@ -29,6 +30,7 @@ h1 {
     text-align: center;
     margin-top: 20px;
     font-size: 28px; 
+    animation: fadeIn 2s ease-in-out;
 }
 
 p {
@@ -45,6 +47,7 @@ p {
     width: 80%; 
     max-width: 400px; 
     margin: 0 auto; 
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 label, select, input, button {
@@ -80,11 +83,33 @@ button {
     background-color: white;
     color: black;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
     background-color: rgb(145, 145, 145);
+    transform: scale(1.05);
+}
+
+#result {
+    opacity: 1;
+    transition: opacity 1s, transform 1s;
+}
+
+.show-result {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 768px) {
