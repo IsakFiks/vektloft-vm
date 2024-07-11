@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="no">
 <head>
     <title>Styrkeløft</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="logo-container">
-        <img src="https://styrkeloft.no/wp-content/uploads/2022/03/NSF_logo_WHITE_gjennomsiktig_luft.png" alt="NSF Logo">
+        <img src="src/logo.png" alt="NSF Logo">
     </div>
     <div class="container">
         <label for="gender">Kjønn:</label>
@@ -17,10 +17,10 @@
             <option value="DAMER">Kvinne</option>
             <option value="HERRER">Mann</option>
         </select>
-        <input id="age" placeholder="Alderen din" type="text" required>
-        <input id="weight" placeholder="Vekten din (KG)" type="text" required>
+        <input id="age" placeholder="Alder" type="text" required>
+        <input id="weight" placeholder="Vekt (KG)" type="text" required>
         <button onclick="submiter()" id="submiter">Finn</button>
-        <h1>Resultat:</h1>
+        <h1 id="mightalways-stayhidden"></h1>
         <p id="result"></p>
         <p id="error" style="color: red;"></p>
     </div>
