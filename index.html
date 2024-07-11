@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Styrkeløft</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="https://styrkeloft.no/wp-content/uploads/2022/03/NSF_logo_WHITE_gjennomsiktig_luft.png" alt="NSF Logo">
+    </div>
+    <div class="container">
+        <label for="gender">Kjønn:</label>
+        <select id="gender" name="gender" required>
+            <option value="">Velg kjønn</option>
+            <option value="DAMER">Damer</option>
+            <option value="HERRER">Herrer</option>
+        </select>
+        <input id="age" placeholder="Alderen din" type="text" required>
+        <input id="weight" placeholder="Vekten din (KG)" type="text" required>
+        <button onclick="submiter()" id="submiter">Finn</button>
+        <h1>Resultat:</h1>
+        <p id="result"></p>
+        <p id="error" style="color: red;"></p>
+    </div>
+</body>
+</html>
